@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_dialog_bottom"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#dadada" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dialog_bottom_hieght"
+        android:background="#f4f4f4"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/dialog_bottom_negative_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_btn_seslector"
+            android:gravity="center"
+            android:textColor="#3d3d3e"
+            android:textSize="@dimen/meta_text_size_small"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="0.5dip"
+            android:layout_height="match_parent"
+            android:background="#dadada"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/dialog_bottom_neutral_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_btn_seslector"
+            android:textColor="@color/white"
+            android:textSize="@dimen/meta_text_size_small"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/dialog_bottom_positive_line"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#dadada"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/dialog_bottom_positive_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_btn_seslector"
+            android:textColor="@color/meta_text_tertiary"
+            android:textSize="@dimen/meta_text_size_small"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

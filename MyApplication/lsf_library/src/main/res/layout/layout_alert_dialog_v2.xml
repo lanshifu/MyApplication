@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_default_bg_v2"
+    android:minHeight="@dimen/dialog_min_height"
+    android:minWidth="@dimen/dialog_min_width"
+    android:orientation="vertical" >
+
+    <ViewStub
+        android:id="@+id/vs_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/layout_alert_dialog_title_v2" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        layout="@layout/layout_alert_dialog_content_v2" />
+
+    <ViewStub
+        android:id="@+id/vs_dialog_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/layout_alert_dialog_bottom_v2" />
+
+</LinearLayout>

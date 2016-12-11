@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RadioButton
+        android:id="@+id/singlechoice_dialog_item_select"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/dialog_btn_seslector"
+        android:button="@null"
+        android:contentDescription="@null"
+        android:drawableLeft="@drawable/singlechoice_dialog_item_selector"
+        android:drawablePadding="@dimen/spacing_4x"
+        android:paddingBottom="@dimen/spacing_3x"
+        android:paddingTop="@dimen/spacing_3x"
+        android:textColor="#3d3d3e"
+        android:textSize="@dimen/meta_text_size_small" />
+
+</RelativeLayout>
