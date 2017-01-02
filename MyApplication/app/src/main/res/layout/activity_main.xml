@@ -21,6 +21,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="单选窗"/>
+ <Button
+        android:id="@+id/btn_multi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多选框"/>
 
     <Button
         android:id="@+id/btn_base"
@@ -32,4 +37,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="多种类型列表"/>
+    <Button
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="basetoolbar"/>
 </LinearLayout>

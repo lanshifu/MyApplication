@@ -36,7 +36,7 @@ import java.net.SocketException;
 import java.security.MessageDigest;
 import java.util.Enumeration;
 
-import library.lanshifu.com.lsf_library.MyAppLication;
+import library.lanshifu.com.lsf_library.baseapp.BaseApplication;
 
 /**
  * 手机管理类. 手机事件信息管理;电话、短信管理;获取版本代号;检测可用网络等
@@ -633,7 +633,7 @@ public final class SystemManage {
      * @param defaulRes 默认返回资源
      */
     public static int getIdentifierDrawable(String name, int defaulRes) {
-        return getIdentifier(MyAppLication.getContext(), name, "drawable", defaulRes);
+        return getIdentifier(BaseApplication.getContext(), name, "drawable", defaulRes);
     }
 
     /**
@@ -649,7 +649,7 @@ public final class SystemManage {
      * 获取屏幕材质信息
      */
     public static DisplayMetrics getDisplayMetrics() {
-        return MyAppLication.getContext().getResources().getDisplayMetrics();
+        return BaseApplication.getContext().getResources().getDisplayMetrics();
     }
 
     /**
@@ -730,8 +730,8 @@ public final class SystemManage {
      */
     public static boolean isValidMd5() {
 
-        String packageName = MyAppLication.getContext().getPackageName();
-        PackageManager pm = MyAppLication.getContext().getPackageManager();
+        String packageName = BaseApplication.getContext().getPackageName();
+        PackageManager pm = BaseApplication.getContext().getPackageManager();
         PackageInfo pi;
         String md5 = "";
         try {

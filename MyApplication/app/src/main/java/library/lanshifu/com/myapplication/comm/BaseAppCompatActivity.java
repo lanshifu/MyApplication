@@ -7,7 +7,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
-import library.lanshifu.com.lsf_library.widget.dialog.LoadingDialog;
 import library.lanshifu.com.myapplication.R;
 import library.lanshifu.com.myapplication.comm.search.SearchActivity;
 
@@ -132,9 +131,6 @@ public abstract class BaseAppCompatActivity extends ToolBarActivity{
         }
     }
 
-    /**** 加载框**/
-    private LoadingDialog.Builder loadingDialog;
-
 
     public void showLoadingDialog() {
         showLoadingDialog(true);
@@ -152,15 +148,7 @@ public abstract class BaseAppCompatActivity extends ToolBarActivity{
             return;
         }
 
-        if (null == loadingDialog) {
-            loadingDialog = new LoadingDialog.Builder(this);
-            loadingDialog.setCancelable(cancleable);
-            loadingDialog.setOnCancelListener(cancelListener);
-            loadingDialog.setView(R.layout.layout_progress_dialog);
-        }
 
-
-        loadingDialog.show();
 
     }
 

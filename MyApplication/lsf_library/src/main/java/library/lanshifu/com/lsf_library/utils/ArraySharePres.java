@@ -11,7 +11,7 @@ package library.lanshifu.com.lsf_library.utils;
 public class ArraySharePres {
 
     public void cleanSPArray(String key) {
-        SysSharePres.getInstance().remove(key);
+        PrefUtil.getInstance().remove(key);
     }
 
     public static class SINGLETON{
@@ -35,11 +35,11 @@ public class ArraySharePres {
             }
             builder.append(strings[i]);
         }
-        SysSharePres.getInstance().putString(key, builder.toString());
+        PrefUtil.getInstance().putString(key, builder.toString());
     }
 
     public String[] getSPArray(String key) {
-        String string = SysSharePres.getInstance().getString(key);
+        String string = PrefUtil.getInstance().getString(key);
         return StringUtil.isEmpty(string) ? new String[0] : string.split("#");
     }
 
@@ -55,14 +55,14 @@ public class ArraySharePres {
     }
 
     public boolean putSPArrayItem(String key, String item) {
-        String string = SysSharePres.getInstance().getString(key);
+        String string = PrefUtil.getInstance().getString(key);
         if (string.contains(item)) {
             return false;
         }
         if (StringUtil.isEmpty(string)) {
-            SysSharePres.getInstance().putString(key, item);
+            PrefUtil.getInstance().putString(key, item);
         } else {
-            SysSharePres.getInstance().putString(key, string + "#" + item);
+            PrefUtil.getInstance().putString(key, string + "#" + item);
         }
         return true;
     }

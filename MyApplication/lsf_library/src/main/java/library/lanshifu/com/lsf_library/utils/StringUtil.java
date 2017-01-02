@@ -12,7 +12,7 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import library.lanshifu.com.lsf_library.MyAppLication;
+import library.lanshifu.com.lsf_library.baseapp.BaseApplication;
 
 /**
  * 字符串操作工具类
@@ -353,8 +353,8 @@ public final class StringUtil {
      */
     public static List<Dictitem> getDictitems(String groupid) {
         List<Dictitem> dictitems = new ArrayList<Dictitem>();
-        Resources res = MyAppLication.getContext().getResources();
-        int id = res.getIdentifier("dict_" + groupid, "array", MyAppLication.getContext()
+        Resources res = BaseApplication.getContext().getResources();
+        int id = res.getIdentifier("dict_" + groupid, "array", BaseApplication.getContext()
                 .getPackageName());
         if (id <= 0) {
             return dictitems;

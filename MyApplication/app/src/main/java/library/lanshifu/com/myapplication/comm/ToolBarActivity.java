@@ -19,8 +19,6 @@ import library.lanshifu.com.myapplication.R;
 
 
 /**
- * Author:  [xWX371834\许纯震].
- * Date:    2016/8/31.
  * Description:
  * 添加ToolBar
  */

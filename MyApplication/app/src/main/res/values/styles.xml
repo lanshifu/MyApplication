@@ -9,7 +9,6 @@
     </style>
 
 
-
     <style name="AppTheme_Blue" parent="AppTheme">
         <!-- 用于换肤 -->
         <item name="isLightTheme">false</item>
@@ -32,5 +31,9 @@
     <style name="TextAppearance.AppTheme_Blue.Title" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textColor">@android:color/white</item>
     </style>
+
+    <style name="AppTheme_Blue.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme_Blue.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

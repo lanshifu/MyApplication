@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Properties;
 
-import library.lanshifu.com.lsf_library.MyAppLication;
+import library.lanshifu.com.lsf_library.baseapp.BaseApplication;
 
 /**
  * 文件操作工具类
@@ -40,15 +40,15 @@ public final class FileUtil {
     public static final double BYTES_PER_M = 1024.0 * 1024.0;
 
     public static final String DATABASE_FOLDER_NAME = Environment.getDataDirectory() + "/data/"
-            + MyAppLication.getContext().getPackageName() + "/databases/";
+            + BaseApplication.getContext().getPackageName() + "/databases/";
 
     public static final String SHAREPRE_CACHE_NAME = Environment.getDataDirectory() + "/data/"
-            + MyAppLication.getContext().getPackageName() + "/cache/";
+            + BaseApplication.getContext().getPackageName() + "/cache/";
 
     /**
      * sd卡的根目录
      */
-    public static final String FILE_ROOT = Environment.getExternalStorageDirectory() + "/G3/"
+    public static final String FILE_ROOT = Environment.getExternalStorageDirectory() + "/aa_lanshifu/"
             + getSimplePackage() + "/";
 
     /**
@@ -92,7 +92,7 @@ public final class FileUtil {
      * @return 包名的最后一个字段
      */
     public static String getSimplePackage() {
-        String packageName = MyAppLication.getContext().getPackageName();
+        String packageName = BaseApplication.getContext().getPackageName();
         int idx = packageName.lastIndexOf(".");
         return idx == -1 ? packageName : packageName.substring(idx + 1);
     }
@@ -477,7 +477,7 @@ public final class FileUtil {
      */
     public static String getAssets(String fileName) {
 
-        return stream2String(getAssetsInputStream(MyAppLication.getContext(), fileName));
+        return stream2String(getAssetsInputStream(BaseApplication.getContext(), fileName));
 
     }
 
